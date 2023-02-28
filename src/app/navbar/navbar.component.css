@@ -1,0 +1,9 @@
+.navbar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.navbar > button {
+  margin: 5px;
+}

@@ -1,0 +1,65 @@
+@use '@angular/material' as mat;
+$my-palette: mat.define-palette(mat.$indigo-palette);
+$second-palette: mat.define-palette(mat.$amber-palette);
+
+.weather-card {
+  min-height: 50vh;
+  min-width: 20vw;
+  border-radius: 0.75rem;
+  margin: 10px;
+  background-color: mat.get-color-from-palette($my-palette, default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  color: mat.get-color-from-palette($my-palette, 50);
+  &__temp {
+    color: mat.get-color-from-palette($second-palette, 300);
+  }
+}
+
+.weather-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.weather-title__city {
+  font-size: 1.5rem;
+  text-transform:capitalize;
+  color: mat.get-color-from-palette($my-palette, 50);
+}
+
+.weather-wind__icon {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: mat.get-color-from-palette($second-palette, 300);
+}
+
+.weather-title__temperature {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: mat.get-color-from-palette($second-palette, 300);
+}
+
+.weather-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.weather-input {
+  width: 80%;
+}

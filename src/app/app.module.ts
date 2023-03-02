@@ -11,6 +11,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { WeatherinputComponent } from './weather-input/weatherinput.component';
+import { WeatherResultComponent } from './weather-result/weather-result.component';
 
 
 const routes: Routes = [
@@ -23,12 +26,15 @@ const routes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    WeatherComponent
+    WeatherComponent,
+    WeatherinputComponent,
+    WeatherResultComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
+    HttpClientModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,

@@ -1,0 +1,28 @@
+<div>
+  <mat-card class="weather-card">
+    <mat-card-title class="weather-title">
+      <div class="weather-title__city">
+        {{searchedCity}}
+        <i [class]="iconClass"></i>
+      </div>
+      <div class="weather-title__temperature">
+        {{weatherData ? weatherData.current_weather.temperature : ''}}°C
+      </div>
+      <div>
+        <i [class]="windIconClass"></i>
+        <i [class]="windSpeedIconClass"></i>
+      </div>
+    </mat-card-title>
+    <mat-card-content class="weather-content">
+      <div *ngFor="let weather of mappedHourlyData">
+        <div class="weather-data">
+          <div class="weather-data__time">{{weather.hour}}</div>
+          <div class="weather-data__temp">{{weather.temperature}}°C</div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="weather-content">
+      <button (click)="clearWeatherData()" mat-raised-button color="accent">Go Back</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

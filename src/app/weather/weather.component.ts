@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {WeatherService} from "../services/weather.service";
+
+import {IWeatherData} from "../types/WeatherType";
 
 @Component({
   selector: 'app-weather',
@@ -7,17 +8,14 @@ import {WeatherService} from "../services/weather.service";
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent {
-  constructor(private weatherService: WeatherService) {
-  }
+  constructor() {}
   searchedCity: string = '';
+  weatherData: IWeatherData | null = null;
 
-  getWeather(): void {
-    this.weatherService.getGeolocation(this.searchedCity).subscribe(
-      {
-        next: (response) => {
-          console.log(response);
-        }
-      }
-    );
+  weatherChange(weatherData: IWeatherData | null): void {
+    this.weatherData = weatherData;
+  }
+  searchedCityChange(searchedCity: string): void {
+    this.searchedCity = searchedCity;
   }
 }

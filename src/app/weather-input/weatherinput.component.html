@@ -1,0 +1,14 @@
+<div>
+  <mat-card class="weather-card">
+    <mat-card-title class="weather-title" >Search a city</mat-card-title>
+    <mat-card-content class="weather-content">
+      <mat-form-field class="weather-input">
+        <mat-label>Input a location</mat-label>
+        <input [(ngModel)]="searchedCity" (ngModelChange)="searchedCityChange.emit($event)" class="weather-input__field" matInput placeholder="Ex. Warsaw">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions class="weather-content">
+      <button (click)="getWeather()" mat-raised-button color="accent">Search</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

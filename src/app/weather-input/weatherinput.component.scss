@@ -1,0 +1,47 @@
+@use '@angular/material' as mat;
+$my-palette: mat.define-palette(mat.$indigo-palette);
+
+.weather-search {
+  display: inline-flex;
+}
+
+.weather-card {
+  min-height: 50vh;
+  border-radius: 0.75rem;
+  max-width: 50vw;
+  margin: 10px;
+  background-color: mat.get-color-from-palette($my-palette, default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: mat.get-color-from-palette($my-palette, 50);
+}
+
+.weather-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-input {
+  width: 80%;
+}
+
+@media screen and (max-width: 640px) {
+  .weather-card {
+    min-height: 50vh;
+    max-width: 85vw;
+    border-radius: 0.75rem;
+    margin: 10px;
+    background-color: mat.get-color-from-palette($my-palette, default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

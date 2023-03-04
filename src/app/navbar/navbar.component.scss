@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+$my-palette: mat.define-palette(mat.$teal-palette);
+
+.navbar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 99vw;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: mat.get-color-from-palette($my-palette, default);
+}
+
+.navbar > button {
+  margin: 5px;
+}

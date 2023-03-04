@@ -1,4 +1,7 @@
 <div class="weather-container">
-  <app-weather-input *ngIf="weatherData === null" [searchedCity]="searchedCity" (searchedCityChange)="searchedCityChange($event)" (weatherChange)="weatherChange($event)"></app-weather-input>
-  <app-weather-result *ngIf="weatherData !== null" [searchedCity]="searchedCity" [weatherData]="weatherData" (weatherChange)="weatherChange($event)"></app-weather-result>
+  <app-weather-input *ngIf="weatherData === null" [searchedCity]="searchedCity"
+                     (searchedCityChange)="searchedCityChange($event)"
+                     (weatherChange)="weatherChange($event)"></app-weather-input>
+  <app-weather-result *ngIf="weatherData !== null" [searchedCity]="searchedCity" [weatherData]="weatherData"
+                      (weatherChange)="weatherChange($event)"></app-weather-result>
 </div>

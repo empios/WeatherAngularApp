@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
+
 $my-palette: mat.define-palette(mat.$indigo-palette);
 $second-palette: mat.define-palette(mat.$amber-palette);
 
@@ -21,6 +22,7 @@ $second-palette: mat.define-palette(mat.$amber-palette);
   align-items: center;
   justify-content: center;
   color: mat.get-color-from-palette($my-palette, 50);
+
   &__temp {
     color: mat.get-color-from-palette($second-palette, 300);
   }
@@ -34,7 +36,7 @@ $second-palette: mat.define-palette(mat.$amber-palette);
 
 .weather-title__city {
   font-size: 1.5rem;
-  text-transform:capitalize;
+  text-transform: capitalize;
   color: mat.get-color-from-palette($my-palette, 50);
 }
 

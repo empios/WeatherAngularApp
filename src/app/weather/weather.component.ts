@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 import {IWeatherData} from "../types/WeatherType";
 
@@ -8,13 +8,16 @@ import {IWeatherData} from "../types/WeatherType";
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent {
-  constructor() {}
+  constructor() {
+  }
+
   searchedCity: string = '';
   weatherData: IWeatherData | null = null;
 
   weatherChange(weatherData: IWeatherData | null): void {
     this.weatherData = weatherData;
   }
+
   searchedCityChange(searchedCity: string): void {
     this.searchedCity = searchedCity;
   }
